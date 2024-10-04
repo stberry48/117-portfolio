@@ -16,11 +16,11 @@
    --DM-font: "DM Sans", sans-serif;
 }
 
-* { 
-  font-family: var(--DM-font);
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+* {
+   font-family: var(--DM-font);
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
 }
 
 html {
@@ -30,7 +30,7 @@ html {
 
 h1 {
    color: var(--secondary-color-600);
-   font-size:2rem;
+   font-size: 2rem;
    text-transform: uppercase;
 }
 
@@ -50,8 +50,8 @@ p {
 .text-label {
    color: var(--background-color);
    background-color: var(--primary-color-100);
-   text-transform:uppercase;
-   font-weight:600;
+   text-transform: uppercase;
+   font-weight: 600;
    padding: 0.8rem 1.5rem;
    font-size: 1.1rem;
 }
@@ -64,7 +64,20 @@ p {
 
 .center-column {
    display: flex;
-   align-items:center;
+   align-items: center;
    justify-content: center;
    flex-direction: column;
+}
+
+.primary-button {
+   font-weight: bold;
+   border-radius: 1rem;
+   border: none;
+   padding: 2.5% 5%;
+   color: var(--neutral-color);
+   background: var(--primary-color-300);
+}
+
+.primary-button:hover {
+   background: linear-gradient(135deg, #7F66FF 0%, #aa99ff 100%);
 }

@@ -1,14 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} Contact Me{% endblock title %}
+{% block title %} Contact {% endblock title %}
 {% load static %}
 
 {% block content %}
 
-<H1>Sheree Berry</H1>
-<h2>919-867-5309</h2>
-<h2>Stberry2011@gmail.com</h2>
+<section class="contact-section center-column"></section>
+<h1>Contact</h1>
+<h2>Feel free to drop a line below!<span></span></h2>
 
+<form id="emailForm" method="POST" action="." class="center-column">
+    {% csrf_token %}
+
+    {{ form.name }}
+    {{ form.email }}
+    {{ form.message }}
+
+    <button class="primary-button">Send Message</button>
+</form>
+
+</section>
 
 {% endblock content %}

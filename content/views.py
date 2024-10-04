@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project
+from .models import Project, Experience
 
 # Create your views here.
 def projects_list(request):
@@ -10,4 +10,13 @@ def projects_list(request):
     )
 
 def experience(request):
-    return render(request, 'content/experience.html')
+
+    experience = Experience.objects.all()
+
+    return render(request, 'content/experience.html', {"experience" : experience})
+
+def contact(request):
+
+    contact = Contact.objects.all()
+
+    return render(request, 'pages/contact.html', {"contact" : contact})
